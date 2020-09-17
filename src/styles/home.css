@@ -1,0 +1,25 @@
+.home-page {
+    display: flex;
+}
+.home-img {
+    border-left: solid 1px var(--pri-color);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+.home-img img {
+    min-height: 100%;
+}
+.headline {
+    border-bottom: solid 1px var(--pri-color);
+}
+.headline, .skills {
+    padding: 20px;
+}
+.headline p {
+    line-height: 1.5em;
+    padding: 0 30px;
+    font-size: 24px;
+}
+
