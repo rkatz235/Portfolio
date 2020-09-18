@@ -3,6 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
   Link,
   NavLink
 } from "react-router-dom";
@@ -55,13 +56,17 @@ export default class App extends React.Component {
                 </li>
             </ul>
           </nav>
-          <Route path="/contact" component={Contact}></Route>
-          <Route exact path="/work/workId" component={WorkTemplate}></Route>
-          <Route exact path="/work" component={Work}></Route>
-          <Route exact path="/resume" component={Resume}></Route>
-          <Route exact path="/profile" component={Profile}></Route>
-          <Route exact path="/portfolio" component={Home}></Route>
-          <Route exact path="/" component={Home}></Route>
+          <Switch>
+            <Route path="/contact" component={Contact}></Route>
+            <Route exact path="/work/:id" component={ WorkTemplate } />
+
+            <Route exact path="/work" component={Work}></Route>
+
+            <Route exact path="/resume" component={Resume}></Route>
+            <Route exact path="/profile" component={Profile}></Route>
+            <Route exact path="/portfolio" component={Home}></Route>
+            <Route exact path="/" component={Home}></Route>
+          </Switch>
 
 
 

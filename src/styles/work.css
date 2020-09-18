@@ -16,7 +16,7 @@
 .work-details h2, .work-details h3 {
     padding-left: 15px;
 }
-.work-entry:last-child {
+.work-list .work-entry:last-child {
     border-bottom: none;
 }
 .work-entry .tag-list {

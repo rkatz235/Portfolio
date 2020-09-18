@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
+import {
+    BrowserRouter as Router,
+    Link,
+    Route, 
+    Switch
+} from 'react-router-dom';
 import '../styles/work.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import WorkTemplate from './WorkTemplate';
 
 export class Work extends Component {
     render() {
         return (
             <div className="page-container work-page">
-                <Router>
                 <div className="work-list">
-                    <Link to="/work/workId" >
+
                     <div className="work-entry">
                         <div className="work-details">
-
-                            <h2>THREE Insurance</h2>
+                            <Link to="/work/0">
+                                <h2>THREE Insurance</h2>
+                            </Link>
                             <ul className="tag-list">
                                 <li className="tag">Umbraco</li>
                                 <li className="tag">ASP.Net</li>
@@ -27,11 +31,11 @@ export class Work extends Component {
                             <img alt="three insurance screenshot" src="https://colorlib.com/wp/wp-content/uploads/sites/2/free-stock-photo-websites.jpg"  />
                         </div>
                     </div>
-                    </Link>
                     <div className="work-entry">
                         <div className="work-details">
-
-                            <h2>Gary Bennett Architecture</h2>
+                            <Link to="/work/1">
+                                <h2>Gary Bennett Architecture</h2>
+                            </Link>
                             <ul className="tag-list">
                                 <li className="tag">ReactJS</li>
                                 <li className="tag">jQuery</li>
@@ -73,8 +77,6 @@ export class Work extends Component {
                         </div>
                     </div>
                 </div>
-
-                </Router>
             </div>
         )
     }
