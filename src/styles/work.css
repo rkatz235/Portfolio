@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: flex-end;
 }
-.work-details h1, .work-details h2 {
+.work-details h2, .work-details h3 {
     padding-left: 15px;
 }
 .work-entry:last-child {

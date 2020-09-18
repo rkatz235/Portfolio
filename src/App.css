@@ -1,3 +1,7 @@
+#root > div {
+    position: relative;
+    width: calc(100% - 90px);
+}
 nav {
     width: 100%;
 }
@@ -5,7 +9,8 @@ nav {
     display: none;
 }
 nav #site-title {
-    padding: 36px;
+    height: 100px;
+    padding: 30px;
 }
 nav #site-title a {
     display: flex;
@@ -38,17 +43,41 @@ nav #site-title a {
 .page-container {
     border-left: solid 1px var(--pri-color);
     border-right: solid 1px var(--pri-color);
+    min-height: calc(100vh - 160px - 180px);
 }
 #external-links {
     position: fixed;
-    display: none;
+    height: 100%;
+    width: 90px;
+    padding-top: 40px;
+    border-left: solid 1px var(--pri-color);
+    right: 0; top: 0;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
 }
+#external-links ul li {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
 #footer {
-    padding: 30px;
+    height: 90px;
     text-align: center;
+    vertical-align: center;
     border-top: solid 1px var(--pri-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 @media only screen and (max-width: 990px) {
+    #root > div {
+        width: 100%;
+    }
+    nav #site-title {
+        height: auto;
+    }
     nav #site-title a {
         font-size: 3em;
     }
@@ -73,6 +102,23 @@ nav #site-title a {
     #ham-icon:hover {
         cursor: pointer;
     }
+    #external-links {
+        position: relative;
+        border-top: solid 1px var(--pri-color);
+        width: 100%;
+        padding-top: 0;
+    }
+    #external-links ul {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        max-width: 120px;
+        padding: 5px 0;
+    }
+    #external-links ul li {
+        padding-bottom: 0;
+        font-size: 30px;
+    }
     #site-nav {
         flex-direction: column;
         height: auto;
@@ -83,6 +129,7 @@ nav #site-title a {
     #site-nav.hidden {
         height: 0;
         transition: height 0.3s;
+        border-bottom: none;
     }
     #site-nav li {
         padding: 15px 0;

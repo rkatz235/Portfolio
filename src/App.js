@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 import Work from './components/Work';
 import Resume from './components/Resume';
 import Profile from './components/Profile';
+import WorkTemplate from './components/WorkTemplate';
 
 export default class App extends React.Component {
   constructor(){
@@ -34,12 +35,12 @@ export default class App extends React.Component {
           
           <nav>
               <div id="site-title">
-                <Link to ="/"><span>Rachel</span><span>Katz</span></Link>
+                <Link to ="/portfolio"><span>Rachel</span><span>Katz</span></Link>
               </div>
               <div className="ham-menu">
                 <FontAwesomeIcon id="ham-icon" icon={faBars} onClick={this.toggleMenu}/>
               </div>
-              <ul id="site-nav">
+              <ul id="site-nav" className="hidden">
                 <li>
                   <NavLink to="/profile" activeClassName="cur-page">Profile</NavLink>
                 </li>
@@ -55,10 +56,13 @@ export default class App extends React.Component {
             </ul>
           </nav>
           <Route path="/contact" component={Contact}></Route>
+          <Route exact path="/work/workId" component={WorkTemplate}></Route>
           <Route exact path="/work" component={Work}></Route>
           <Route exact path="/resume" component={Resume}></Route>
           <Route exact path="/profile" component={Profile}></Route>
+          <Route exact path="/portfolio" component={Home}></Route>
           <Route exact path="/" component={Home}></Route>
+
 
 
           <div id="external-links">

@@ -7,9 +7,9 @@
     src: url('./fonts/OpenSauceSans-LightItalic.ttf');
 }
 :root {
-    --pri-color: rgb(246, 148, 148);
-    --pri-color-lite: rgba(246, 148, 148, 0.25);
-    --sec-color: #0e332f;
+    --pri-color: rgb(192, 133, 82);
+    --pri-color-lite: rgba(192, 133, 82, 0.25);
+    --sec-color: rgb(243, 233, 220);
     --font: 'Sauce';
 }
 ul {
@@ -27,12 +27,20 @@ a, p, li, h1, h2, h3, h4, h5, label, button, input, textarea {
     margin: 0;
     font-family: OpenSauceSans, 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
-
+p {
+    font-size: 24px;
+}
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
 button, .button {
     background-color: var(--pri-color);
     color: var(--sec-color);
     padding: 10px;
     transition: 1.5s;
+    height: 80px;
+    font-size: 30px;
 }
 button:hover, .button:hover {
     background-color: var(--sec-color);
