@@ -42,7 +42,6 @@ nav #site-title a {
 }
 .page-container {
     border-left: solid 1px var(--pri-color);
-    border-right: solid 1px var(--pri-color);
     min-height: calc(100vh - 160px - 180px);
 }
 #external-links {
@@ -79,7 +78,7 @@ nav #site-title a {
         height: auto;
     }
     nav #site-title a {
-        font-size: 3em;
+        font-size: 7vw;
     }
     .page-container {
         border: none;

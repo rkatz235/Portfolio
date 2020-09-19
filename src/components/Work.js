@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import {
-    BrowserRouter as Router,
-    Link,
-    Route, 
-    Switch
-} from 'react-router-dom';
+import { Link }
+from 'react-router-dom';
 import '../styles/work.css';
 
 export class Work extends Component {
@@ -28,12 +24,28 @@ export class Work extends Component {
                         </div>
 
                         <div className="work-image">
-                            <img alt="three insurance screenshot" src="https://colorlib.com/wp/wp-content/uploads/sites/2/free-stock-photo-websites.jpg"  />
+                            <img alt="three insurance screenshot" src={require("../img/three/three_claims_desk.png")}  />
+                        </div>
+                    </div>
+                    
+                    <div className="work-entry">
+                        <div className="work-details">
+                            <Link to="/work/1">
+                                <h2>Alev Studios</h2>
+                            </Link>
+                            <ul className="tag-list">
+                                <li className="tag">PHP</li>
+                                <li className="tag">GoDaddy</li>
+                            </ul>
+                        </div>
+
+                        <div className="work-image">
+                            <img alt="alev studios screenshot" src={require("../img/alev/alev_home.png")}  />
                         </div>
                     </div>
                     <div className="work-entry">
                         <div className="work-details">
-                            <Link to="/work/1">
+                            <Link to="/work/2">
                                 <h2>Gary Bennett Architecture</h2>
                             </Link>
                             <ul className="tag-list">
@@ -44,21 +56,7 @@ export class Work extends Component {
                             </ul>
                         </div>
                         <div className="work-image">
-                            <img alt="gary bennett screenshot" src="https://colorlib.com/wp/wp-content/uploads/sites/2/free-stock-photo-websites.jpg"  />
-                        </div>
-                    </div>
-                    <div className="work-entry">
-                        <div className="work-details">
-
-                            <h2>Alev Studios</h2>
-                            <ul className="tag-list">
-                                <li className="tag">PHP</li>
-                                <li className="tag">GoDaddy</li>
-                            </ul>
-                        </div>
-
-                        <div className="work-image">
-                            <img alt="alev studios screenshot" src="https://colorlib.com/wp/wp-content/uploads/sites/2/free-stock-photo-websites.jpg"  />
+                            <img alt="gary bennett screenshot" src={require("../img/gary/gary_home.png")}  />
                         </div>
                     </div>
                     <div className="work-entry">
@@ -73,7 +71,7 @@ export class Work extends Component {
                             </ul>
                         </div>
                         <div className="work-image">
-                            <img alt="wholefields screenshot" src="https://colorlib.com/wp/wp-content/uploads/sites/2/free-stock-photo-websites.jpg"  />
+                            <img alt="wholefields screenshot" src={require("../img/wholefields/wholefields_adobe.png")}  />
                         </div>
                     </div>
                 </div>

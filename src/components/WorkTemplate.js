@@ -7,25 +7,40 @@ export class WorkTemplate extends Component {
         
         this.projInfos = [
             {
-                title: "South Park",
-                link: "hbomax.com",
-                tags: ["comedy", "anim"],
+                title: "Three Insurance",
+                link: "threeinsurance.com",
+                linkText: "threeinsurance.com",
+                tags: ["Microsoft Azure", "Umbraco", "jQuery"],
                 des: "djflsjdflsjdflskdjflksjdfk",
                 imgs: [
-                    "https://assets.website-files.com/5ee9634953b7208d74126fe8/5eeaa8ecaefc2fc32feb1f54_landscape-1-p-1080.jpeg",
-                    "https://assets.website-files.com/5ee9634953b7208d74126fe8/5eeaa8ecaefc2fc32feb1f54_landscape-1-p-1080.jpeg",
-                    "https://assets.website-files.com/5ee9634953b7208d74126fe8/5eeaa8ecaefc2fc32feb1f54_landscape-1-p-1080.jpeg"
+                    require("../img/three/three_home_desk.png"),
+                    require("../img/three/three_claims_desk.png"),
+                    require("../img/three/three_policy_desk.png")
                 ]
             },
             {
-                title: "Space X",
-                link: "netflix.com",
-                tags: ["aero", "science"],
+                title: "Alev Studios",
+                link: "alevstudios.com",
+                linkText: "alevstudios.com",
+                tags: ["PHP", "jQuery"],
                 des: "djflsjdflsjdflskdjflksjdfk",
                 imgs: [
-                    "https://assets.website-files.com/5ee9634953b7208d74126fe8/5eeaa8ecaefc2fc32feb1f54_landscape-1-p-1080.jpeg",
-                    "https://assets.website-files.com/5ee9634953b7208d74126fe8/5eeaa8ecaefc2fc32feb1f54_landscape-1-p-1080.jpeg",
-                    "https://assets.website-files.com/5ee9634953b7208d74126fe8/5eeaa8ecaefc2fc32feb1f54_landscape-1-p-1080.jpeg"
+                    require("../img/alev/alev_home.png"),
+                    require("../img/alev/alev_project.png"),
+                    require("../img/alev/alev_projects.png")
+
+                ]
+            },
+            {
+                title: "Gary Bennett Architecture",
+                link: "#",
+                linkText: "Coming Soon",
+                tags: ["React", "jQuery"],
+                des: "djflsjdflsjdflskdjflksjdfk",
+                imgs: [
+                    require("../img/gary/gary_home.png"),
+                    require("../img/gary/gary_project_2.png"),
+                    require("../img/gary/gary_projects.png")
                 ]
             }
         ]
@@ -47,11 +62,11 @@ export class WorkTemplate extends Component {
                             </div>
                             <div>
                                 <p>Link</p>
-                                <a href="hbomax.com">{curProj.link}</a>
+                                <a href={curProj.link}>{curProj.linkText}</a>
                             </div>
                             <ul className="tag-list">
                                 {curProj.tags.map((el, i) => 
-                                    <li className="tag">{el}</li>
+                                    <li key={i} className="tag">{el}</li>
                                 )}
                             </ul>
                         </div>
@@ -62,7 +77,7 @@ export class WorkTemplate extends Component {
                     </div>
                 </div>
                 <div className="project-imgs">
-                    {curProj.imgs.map((el, i) => <img src={el} />)}
+                    {curProj.imgs.map((el, i) => <img key={i}  alt="website screenshot" src={el} />)}
                 </div>
             </div>
         )

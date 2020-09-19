@@ -29,6 +29,10 @@
     max-width: 200px;
 
 }
+.work-image {
+    max-height: 500px;
+    overflow: hidden;
+}
 .work-image img {
     width: 100%;
 }

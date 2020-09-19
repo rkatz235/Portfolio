@@ -1,14 +1,16 @@
 .contact-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;   
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;    */
 }
 .contact-info, .contact-form {
     padding: 20px;
 }
 .contact-info {
-    border-right: 1px solid var(--pri-color);
+    /* border-right: 1px solid var(--pri-color); */
     display: flex;
     flex-direction: column;
+    padding: 100px;
+    max-width: 500px;
 }
 .contact-info > p {
     padding: 40px 0;
@@ -16,6 +18,10 @@
 .contact-info-details a{
     display: block;
     text-decoration: underline;
+    padding-bottom: 15px;
+}
+.contact-info-details a svg {
+    margin-right: 20px;
 }
 .contact-form{
     display: flex;
