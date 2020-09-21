@@ -21,6 +21,8 @@ export class Home extends Component {
                             <li className="tag">Node.js</li>
                             <li className="tag">Umbraco</li>
                             <li className="tag">Wordpress</li>
+                            <li className="tag">HTML/CSS</li>
+
                         </ul>
                     </div>
                 </div>
