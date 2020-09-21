@@ -1,10 +1,10 @@
 .project-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-bottom: solid 1px var(--pri-color);
+    border-bottom: var(--border);
 }
 .project-text .info{
-    border-right: solid 1px var(--pri-color);
+    border-right: var(--border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,11 +15,11 @@
     padding: 30px;
 }
 .project-text .info .info-deets {
-    border-top: solid 1px var(--pri-color);
+    border-top: var(--border);
     padding: 30px;
 }
 .project-text .info .info-deets > div {
-    border-bottom: dotted 1px var(--pri-color);
+    border-bottom: var(--dot-border);
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,43 @@
 }
 .project-text .des p {
     padding-bottom: 15px;
-    font-size: 18px;
+    font-size: 16px;
+}
+.react-slideshow-container {
+    display: block;
+    position: relative;
+}
+.react-slideshow-container .nav.default-nav {
+    position: absolute;
+    top: 100px;
+    height: 120px;
+    border-radius: 10%;
+}
+.react-slideshow-container .nav.default-nav:first-of-type {
+    left: 5%;
+}
+.react-slideshow-container .nav.default-nav:last-of-type {
+    right: 5%;
+}
+.project-slide {
+    padding: 30px 0;
+    max-height: 2000px;
+    overflow: hidden;
+}
+.project-slide .title {
+    padding-bottom: 30px;
+    text-align: center;
+}
+.project-slide .title h2 {
+    font-size: 26px;
+}
+.each-slide {
+    display: flex;
+    justify-content: center;
+}
+.each-slide img {
+    max-width: 973px;
+    width: 80%;
 }
 .project-imgs {
     display: flex;
@@ -61,5 +97,15 @@
     .project-text {
         display: flex;
         flex-direction: column;
+    }
+    .project-slide {
+        max-height: 800px;
+        overflow: hidden;
+    }
+    .react-slideshow-container .nav.default-nav:first-of-type {
+        left: 5px;
+    }
+    .react-slideshow-container .nav.default-nav:last-of-type {
+        right: 5px;
     }
 }

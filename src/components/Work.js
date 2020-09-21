@@ -24,7 +24,28 @@ export class Work extends Component {
                         </div>
 
                         <div className="work-image">
+                            <Link to="/work/0">
                             <img alt="three insurance screenshot" src={require("../img/three/three_claims_desk.png")}  />
+                            </Link>
+                        </div>
+                    </div>
+                    
+                    <div className="work-entry">
+                        <div className="work-details">
+                            <Link to="/work/3">
+                                <h2>Wholefield's</h2>
+                            </Link>
+                            <h3>Coming Soon</h3>
+                            <ul className="tag-list">
+                                <li className="tag">Wordpress</li>
+                                <li className="tag">Shopify</li>
+                                <li className="tag">React</li>
+                            </ul>
+                        </div>
+                        <div className="work-image">
+                            <Link to="/work/3">
+                            <img alt="wholefields screenshot" src={require("../img/wholefields/wholefields_adobe.png")}  />
+                            </Link>
                         </div>
                     </div>
                     
@@ -40,9 +61,12 @@ export class Work extends Component {
                         </div>
 
                         <div className="work-image">
+                            <Link to="/work/2">
                             <img alt="alev studios screenshot" src={require("../img/alev/alev_home.png")}  />
+                            </Link>
                         </div>
                     </div>
+                    
                     <div className="work-entry">
                         <div className="work-details">
                             <Link to="/work/2">
@@ -56,24 +80,12 @@ export class Work extends Component {
                             </ul>
                         </div>
                         <div className="work-image">
+                            <Link to="/work/2">
                             <img alt="gary bennett screenshot" src={require("../img/gary/gary_home.png")}  />
+                            </Link>
                         </div>
                     </div>
-                    <div className="work-entry">
-                        <div className="work-details">
-
-                            <h2>Wholefield's</h2>
-                            <h3>Coming Soon</h3>
-                            <ul className="tag-list">
-                                <li className="tag">Wordpress</li>
-                                <li className="tag">Shopify</li>
-                                <li className="tag">React</li>
-                            </ul>
-                        </div>
-                        <div className="work-image">
-                            <img alt="wholefields screenshot" src={require("../img/wholefields/wholefields_adobe.png")}  />
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         )

@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px 40px;
-    border-bottom: solid 1px var(--pri-color);
+    border-bottom: var(--border);
 }
 .work-details {
     display: flex;

@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 600px;
 }
 .home-img {
-    border-left: solid 1px var(--pri-color);
+    border-left: var(--border);
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -15,6 +16,14 @@
 }
 .home-img img {
     min-height: 100%;
+    max-height: 500px;
+    filter: grayscale(50%);
+    transition: 1s;
+
+}
+.home-img img:hover {
+    filter: grayscale(0);
+    transition: 1s;
 }
 
 .headline, .skills {
@@ -23,12 +32,12 @@
 .skills {
     display: flex;
     align-items: flex-end;
-    border-top: solid 1px var(--pri-color);
+    border-top: var(--border);
 }
 .headline p {
     line-height: 1.5em;
     padding: 0 30px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 990px) {

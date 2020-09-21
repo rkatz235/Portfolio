@@ -14,22 +14,39 @@ nav #site-title {
 }
 nav #site-title a {
     display: flex;
-    justify-content: space-between;
-    font-size: 5em;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+nav #site-title a h1 {
+    font-size: 4em;
     text-transform: uppercase;
     letter-spacing: 0.3em;
+    position: relative;
+}
+nav #site-title a h1 span {
+    width: 90%;
+    height: 60%;
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    background-color: var(--sec);
+    opacity: 0.8;
+    z-index: -1;
+    transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
 }
 #site-nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: solid 1px var(--pri-color);
-    border-bottom: solid 1px var(--pri-color);
+    border-top: var(--border);
+    border-bottom: var(--border);
     height: 90px;
 }
 #site-nav a.cur-page {
     text-decoration: underline;
-    font-family: OpenSauceItalic, Arial, Helvetica, sans-serif;
+    font-family: OpenSauceSansItalic, Arial, Helvetica, sans-serif;
     font-style: italic;
 }
 #site-nav a {
@@ -41,7 +58,7 @@ nav #site-title a {
     text-decoration: underline;
 }
 .page-container {
-    border-left: solid 1px var(--pri-color);
+    border-left: var(--border);
     min-height: calc(100vh - 160px - 180px);
 }
 #external-links {
@@ -49,7 +66,7 @@ nav #site-title a {
     height: 100%;
     width: 90px;
     padding-top: 40px;
-    border-left: solid 1px var(--pri-color);
+    border-left: var(--border);
     right: 0; top: 0;
     display: flex;
     align-items:flex-start;
@@ -59,12 +76,21 @@ nav #site-title a {
     font-size: 40px;
     padding-bottom: 30px;
 }
+#external-links ul li > * {
+    color: var(--pri);
+    transition: 0.3s;
+
+}
+#external-links ul li > *:hover {
+    color: black;
+    transition: 0.3s;
+}
 
 #footer {
     height: 90px;
     text-align: center;
     vertical-align: center;
-    border-top: solid 1px var(--pri-color);
+    border-top: var(--border);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +103,7 @@ nav #site-title a {
     nav #site-title {
         height: auto;
     }
-    nav #site-title a {
+    nav #site-title a h1 {
         font-size: 7vw;
     }
     .page-container {
@@ -89,8 +115,8 @@ nav #site-title a {
         justify-content: flex-end;
         width: 100%;
         padding: 15px 0;
-        border-top: solid 1px var(--pri-color);
-        border-bottom: solid 1px var(--pri-color);
+        border-top: var(--border);
+        border-bottom: var(--border);
     }
     .ham-menu > * {
         font-size: 30px;
@@ -103,7 +129,7 @@ nav #site-title a {
     }
     #external-links {
         position: relative;
-        border-top: solid 1px var(--pri-color);
+        border-top: var(--border);
         width: 100%;
         padding-top: 0;
     }
@@ -134,7 +160,7 @@ nav #site-title a {
         padding: 15px 0;
         width: 100%;
         text-align: center;
-        border-bottom: solid 1px var(--pri-color);
+        border-bottom: var(--border);
     }
     #site-nav li:last-child {
         border-bottom: none;

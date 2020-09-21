@@ -36,7 +36,7 @@ export default class App extends React.Component {
           
           <nav>
               <div id="site-title">
-                <Link to ="/portfolio"><span>Rachel</span><span>Katz</span></Link>
+                <Link to ="/portfolio"><h1>Rachel<span></span></h1><h1>Katz<span></span></h1></Link>
               </div>
               <div className="ham-menu">
                 <FontAwesomeIcon id="ham-icon" icon={faBars} onClick={this.toggleMenu}/>
